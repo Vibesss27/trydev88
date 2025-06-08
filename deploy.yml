@@ -1,0 +1,9 @@
+---
+- name: Deploy Maven Artifact
+  hosts: local
+  become: yes
+  tasks:
+    - name: Copy artifact
+      copy:
+        src: "/home/vibhakota2/mavenci/target/maven_app2-1.0-SNAPSHOT.jar"
+        dest: "/opt/deployment/maven_app2.jar"
